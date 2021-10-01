@@ -1,0 +1,18 @@
+.dashboard{
+    width: 80%;
+    height:34rem;
+}
+
+.dashboard_layout{
+    display: flex;
+    height: 100%;
+    gap: 1rem;
+}
+
+.userDetails{
+    min-width: 25%;
+}
+
+.timeTracking{
+    min-width: 75%;
+}
