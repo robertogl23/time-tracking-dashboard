@@ -1,9 +1,5 @@
-const App = () => {
-    return (
-        <div>
-            <h1>hola</h1>
-        </div>
-    )
-}
+import DashBoard from "./features/dashboard"
+
+const App = () => <DashBoard/>
 
 export default App
