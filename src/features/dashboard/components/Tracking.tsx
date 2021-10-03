@@ -6,14 +6,14 @@ interface Props {
 
 const Tracking = (props: Props) => {
     return (
-        <div className={styles.grid_tracking}>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        </div>
+        <>
+            <Card cardType={"work"}/>
+            <Card cardType={"play"}/>
+            <Card cardType={"study"}/>
+            <Card cardType={"exercise"}/>
+            <Card cardType={"social"}/>
+            <Card cardType={"selfCare"}/>   
+        </>
     )
 }
 
