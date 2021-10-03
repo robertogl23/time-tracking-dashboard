@@ -1,3 +1,4 @@
+import Tracking from './components/Tracking';
 import UserProfile from './components/UserProfile';
 import styles from './css/dashboard.module.css';
 
@@ -9,8 +10,8 @@ const DashBoard = () => {
                 <section className={styles.userDetails}>
                     <UserProfile/>
                 </section>
-                <section className={styles.timeTracking}>
-
+                <section className={styles.timeTracking}>             
+                    <Tracking/>
                 </section>
             </div>
         </section>
