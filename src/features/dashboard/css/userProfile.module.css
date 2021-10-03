@@ -8,7 +8,11 @@
 .profile_header{
     height: 70%;
     background: var(--DesaturatedBlue);
-    border-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-top-right-radius: var(--Rounder);
+    border-top-left-radius: var(--Rounder);
+
     padding: 2rem;
 }
 
@@ -48,6 +52,9 @@
 .profile_times li{
     height: 2.6rem;
     color: var(--PaleBlue);
+}
+.profile_times li:hover{
+    cursor: pointer;
 }
 .selected {
     color: #fff !important;

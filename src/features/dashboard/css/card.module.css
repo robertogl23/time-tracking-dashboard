@@ -1,17 +1,105 @@
 .card{
     height: 100%;
-    border-radius: 8px;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    box-sizing: content-box;
+    border-radius: 12px 12px 14px 14px;
+
 }
-.card svg {
-    height: 22%;
+
+.image{
+    height: 100%;
     width: 100%;
+    box-sizing: content-box;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 5.3rem; 
+}
+.bgColorWork{
     background: var(--LightRedWork);
+}
+.bgColorplay{
+    background: var(--SoftBluePlay);
+}
+.bgColorSelfCare{
+    background: var(--SoftOrangeSelfCare);
+}
+.bgColorSocial{
+    background: var(--VioletSocial);
+}
+.bgColorStudy{
+    background: var(--LightRedStudy);
+}
+.bgColorExercise{
+    background: var(--LimeGreenExercise);
+}
+
+.work{
+    background-image: url('../../../shared//images/icon-work.svg');
+}
+.play{
+    background-image: url('../../../shared//images/icon-play.svg');
+}
+.social{
+    background-position: right top;
+    background-image: url('../../../shared//images/icon-social.svg');
+}
+.selfCare{
+    background-image: url('../../../shared//images/icon-self-care.svg');
+}
+.study{
+    background-image: url('../../../shared//images/icon-study.svg');
+}
+.exercise{
+    background-position: right top;
+    background-image: url('../../../shared//images/icon-exercise.svg');
+}
+
+
+.content_image{
+    height: 18%;
+    width: 100%;
+    padding-right: 16px;
 }
 
 .body{
+    height: 83%;
+    width: 100%;
+    border-radius:  var(--Rounder);
     background: var(--DarkBlue);
-    height: 86%;
-    border-radius: 8px;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.body header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body h4 {
+    text-transform: capitalize;
+}
+
+.body svg:hover {
+    cursor: pointer;
+}
+
+.body footer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.body span{
+    color: var(--PaleBlue);
+    font-size: 12px;
+    font-weight: 600;
+}
+.body h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 1px;
 }
