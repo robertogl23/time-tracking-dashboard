@@ -1,0 +1,17 @@
+.card{
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;  
+}
+.card svg {
+    height: 22%;
+    width: 100%;
+    background: var(--LightRedWork);
+}
+
+.body{
+    background: var(--DarkBlue);
+    height: 86%;
+    border-radius: 8px;
+}
