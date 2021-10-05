@@ -59,3 +59,44 @@
 .selected {
     color: #fff !important;
 }
+
+@media (max-width: 800px) {
+    .profile_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+        gap: .6rem;
+    }
+    .profile_description {
+        margin: 0;
+        width: 100%;
+    }
+    .profile_times{
+        height: 30%;
+        width: 100%;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .profile_description h3 {
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .profile_image{
+        width: 5rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile_times li{
+        height: auto;
+    }
+
+}
