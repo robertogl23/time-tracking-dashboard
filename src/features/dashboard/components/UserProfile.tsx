@@ -1,6 +1,37 @@
 import styles from '../css/userProfile.module.css';
 import image from '../../../shared/images/image-jeremy.png'
+import { useContext, useState } from 'react';
+import { TimeFrameType, TrackingContext } from '../context/TrackingContext';
+
+interface ITimeFrames {
+    daily    : boolean;
+    weekly   : boolean;
+    monthly  : boolean;
+    lastType : TimeFrameType;
+}
+
 const UserProfile = () => {
+    const { changeTimeFrame } = useContext(TrackingContext)
+    const [state, setstate] = useState<ITimeFrames>(
+        {
+            daily    : true,
+            monthly  : false,
+            weekly   : false,
+            lastType : 'daily'
+        }
+    )
+
+    const handleClick = (type : TimeFrameType) => {
+        const values : ITimeFrames = {
+            ...state,
+            [type] : true,
+            [state.lastType]: false,
+            lastType: type
+
+        } as ITimeFrames;
+        setstate(values)
+        changeTimeFrame(type)
+    }
     return (
         <div className={styles.profile}>
             <header className={styles.profile_header}>
@@ -14,9 +45,24 @@ const UserProfile = () => {
             </header>
             <div className={styles.profile_times}>
                 <ul>
-                    <li>Daily</li>
-                    <li className={styles.selected}>Weekly</li>
-                    <li>Mounthly</li>
+                    <li
+                        onClick={() => handleClick('daily')}
+                        className={`${state.daily && styles.selected}`}
+                    >
+                        Daily
+                    </li>
+                    <li
+                        onClick={() => handleClick('weekly')}
+                        className={`${state.weekly && styles.selected}`}
+                    >
+                        Weekly
+                    </li>
+                    <li
+                        onClick={() => handleClick('monthly')}
+                        className={`${state.monthly && styles.selected}`}
+                    >
+                        Mounthly
+                    </li>
                 </ul>
             </div>
         </div>
